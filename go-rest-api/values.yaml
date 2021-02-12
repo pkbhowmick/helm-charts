@@ -1,16 +1,12 @@
 Deployment:
   Name: go-rest-api
-  Labels: go-rest-api
   Replicas: 2
-  SelectorLabel: go-rest-api
-  PodLabel: go-rest-api
   ContainerName: go-rest-api
   Image: pkbhowmick/go-rest-api:2.0.1
   ContainerPort: 8080
 
 Service:
   Name: api-server-service
-  Selector: go-rest-api
   Type: NodePort
   Port: 8080
   TargerPort: 8080
