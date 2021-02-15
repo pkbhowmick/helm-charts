@@ -1,23 +1,26 @@
+{{ $root := . }}
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Values.Deployment.Name }}
+  name: {{$root.Release.Name}}-deployment
   labels:
-{{ include "myapp.labels" . | indent 4 }}
+{{- include "labels" . | nindent 4 }}
 spec:
   replicas: {{ .Values.Deployment.Replicas }}
   selector:
     matchLabels:
-{{ include "myapp.labels" . | indent 6 }}
+{{- include "labels" . | nindent 6 }}
   template:
     metadata:
       labels:
-{{ include "myapp.labels" . | indent 8 }}
+{{- include "labels" . | nindent 8 }}
     spec:
       containers:
-        - name: {{ .Values.Deployment.ContainerName }}
-          image: {{ .Values.Deployment.Image }}
+        {{- with .Values.Deployment}}
+        - name: {{ .ContainerName }}
+          image: {{ .Image }}
           ports:
-          - containerPort: {{ .Values.Deployment.ContainerPort }}
-
+          - containerPort: {{ .ContainerPort }}
+        {{- end }}
 

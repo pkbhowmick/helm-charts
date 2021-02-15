@@ -1,12 +1,16 @@
+{{ $root:= . }}
+
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ .Values.Service.Name }}
+  name: {{ $root.Release.Name }}-service
 spec:
   selector:
-{{ include "myapp.labels" . | indent 4 }}
-  type: {{ .Values.Service.Type }}
+{{- include "labels" . | nindent 4 }}
+  {{- with .Values.Service}}
+  type: {{ .Type }}
   ports:
-    - port: {{ .Values.Service.Port }}
-      targetPort: {{ .Values.Service.TargerPort }}
-      nodePort: {{ .Values.Service.NodePort }}
+    - port: {{ .Port }}
+      targetPort: {{ .TargerPort }}
+      nodePort: {{ .NodePort }}
+  {{- end}}
