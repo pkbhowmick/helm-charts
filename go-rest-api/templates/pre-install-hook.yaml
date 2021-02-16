@@ -6,8 +6,8 @@ metadata:
     app.kubernetes.io/managed-by: {{ .Release.Service | quote }}
     app.kubernetes.io/instance: {{ .Release.Name | quote }}
   annotations:
-    "helm.sh/hook" : post-install
-    "helm.sh/hook-weight": "2"
+    "helm.sh/hook" : pre-install
+    "helm.sh/hook-weight": "1"
     "helm.sh/hook-delete-policy": hook-succeeded
 spec:
   template:
@@ -19,11 +19,12 @@ spec:
     spec:
       restartPolicy: Never
       containers:
-      - name: post-install-job
-        image: "busybox"
-        args:
-          - /bin/sh
-          - -c
-          - date; echo This is a post installed hook
+        - name: post-install-job
+          image: "busybox"
+          args:
+            - /bin/sh
+            - -c
+            - date; echo This is a pre installed hook
+
 
 
