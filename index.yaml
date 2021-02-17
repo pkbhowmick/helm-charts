@@ -1,11 +1,19 @@
 apiVersion: v1
 entries:
+  firstChart:
+  - apiVersion: v2
+    created: "2021-02-17T19:47:08.741817083+06:00"
+    digest: c875cb88ba0d902324fd82905553ed3f8b9053b2b585ee7c690986b4708448f5
+    name: firstChart
+    urls:
+    - https://pkbhowmick.me/helm-charts/stable/firstChart-0.1.0.tgz
+    version: 0.1.0
   go-rest-api:
   - apiVersion: v2
-    created: "2021-02-17T19:01:08.725233477+06:00"
+    created: "2021-02-17T19:47:08.742527398+06:00"
     digest: ae5d849ad8761baef44a172f3c03eeab623a5beb02c47b1f53a87b7d01d67b8a
     name: go-rest-api
     urls:
     - https://pkbhowmick.me/helm-charts/stable/go-rest-api-2.0.1.tgz
     version: 2.0.1
-generated: "2021-02-17T19:01:08.724234164+06:00"
+generated: "2021-02-17T19:47:08.741239113+06:00"
