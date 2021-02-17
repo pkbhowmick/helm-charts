@@ -1,0 +1,11 @@
+apiVersion: v1
+entries:
+  go-rest-api:
+  - apiVersion: v2
+    created: "2021-02-17T10:14:24.471156985+06:00"
+    digest: fe30bfb1594b47f66a9ce5061a241a2dbfb377cd9951b2f0e6b05c303c2f36a3
+    name: go-rest-api
+    urls:
+    - https://github.com/pkbhowmick/helm-charts/go-rest-api/go-rest-api-2.0.1.tgz
+    version: 2.0.1
+generated: "2021-02-17T10:14:24.470742086+06:00"
