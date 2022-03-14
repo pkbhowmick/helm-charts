@@ -15,6 +15,7 @@ Service:
   NodePort: 30000
 
 Ingress:
+  enabled: false
   Host: api.github.local
   Path: /
   PathType: Prefix
