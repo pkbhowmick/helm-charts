@@ -1,4 +1,4 @@
 apiVersion: v2
 name: "go-rest-api"
-version: 2.0.1
+version: v2022.03.14
 AppsVersion: "2.0.1"

@@ -14,6 +14,6 @@ entries:
     digest: ae5d849ad8761baef44a172f3c03eeab623a5beb02c47b1f53a87b7d01d67b8a
     name: go-rest-api
     urls:
-    - https://pkbhowmick.github.io/helm-charts/stable/go-rest-api-2.0.1.tgz
-    version: 2.0.1
+    - https://pkbhowmick.github.io/helm-charts/stable/go-rest-api/go-rest-api-v2022.03.14.tgz
+    version: v2022.03.14
 generated: "2021-02-17T19:47:08.741239113+06:00"
